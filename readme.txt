@@ -1,8 +1,8 @@
 === Get Cash ===
-Contributors: theafricanboss, freemius
+Contributors: theafricanboss, freemius, positive-medium
 Donate Link: https://gurastores.com/get-cash
 Tags: tips, donate, donations, cash, cashapp, cash app, finance, payments, money, transfer, receive, send, money transfer, usa, mobile money, momo, woocommerce
-Stable tag: 3.2.2
+Stable tag: 3.2.4
 Requires PHP: 5.0
 Requires at least: 5.0
 Tested up to: 6.8.1
@@ -103,6 +103,21 @@ After activating the plugin, add your the relevant information in the plugin set
 This update is a security, maintenance, and compatibility release. Updating is highly recommended.
 
 == Changelog ==
+
+= 3.2.4 Sep 5, 2025 =
+
+- SECURITY: Fixed critical XSS vulnerabilities (CVE-2025-58823)
+- Added proper output escaping for all user input fields
+- Fixed JavaScript injection vulnerability in inline scripts
+- Enhanced input sanitization across all form elements
+- Security contribution by Positive Medium
+
+= 3.2.3 Sep 5, 2025 =
+
+- SECURITY: Initial XSS vulnerability fixes in admin forms
+- Added esc_attr() escaping for form field callbacks
+- Fixed unescaped test links in admin panel
+- Security contribution by Positive Medium
 
 = 3.2.2 May 15, 2025 =
 
