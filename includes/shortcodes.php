@@ -274,7 +274,7 @@ function get_cash_form_shortcode(  $atts  ) {
     foreach ( $all_payments as $payment_option ) {
         $form_html .= '<div class="get-cash-form-check get-cash-d-flex get-cash-align-items-center get-cash-me-3" data-bs-toggle="tooltip" title="' . esc_attr( ucfirst( trim( $payment_option ) ) ) . '">
                      <input id="' . esc_attr( strtolower( str_replace( ' ', '', $payment_option ) ) ) . '"
-                     data-receiver="' . $get_cash_options['receiver_' . esc_attr( strtolower( str_replace( " ", "_", trim( $payment_option ) ) ) )] . '"
+                     data-receiver="' . esc_attr( $get_cash_options['receiver_' . esc_attr( strtolower( str_replace( " ", "_", trim( $payment_option ) ) ) )] ) . '"
                      class="get-cash-form-check-input get-cash-me-2"
                      type="radio" name="GetCashPaymentMethod" required
                      value="' . esc_attr( strtolower( str_replace( ' ', '', $payment_option ) ) ) . '" />

@@ -241,11 +241,11 @@ if ( !class_exists( 'Get_Cash' ) ) {
          */
         public function get_cash_receiver_cash_app_callback() {
             if ( !empty( $this->get_cash_option( 'receiver_cash_app' ) ) ) {
-                $test = '<a class="link-primary" href="https://cash.me/' . $this->get_cash_option( 'receiver_cash_app' ) . '" target="_blank">Test</a>';
+                $test = '<a class="link-primary" href="https://cash.me/' . esc_attr( $this->get_cash_option( 'receiver_cash_app' ) ) . '" target="_blank">Test</a>';
             } else {
                 $test = null;
             }
-            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_cash_app]" id="receiver_cash_app" value="%s"> ' . $test, $this->get_cash_option( 'receiver_cash_app' ) );
+            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_cash_app]" id="receiver_cash_app" value="%s"> ' . $test, esc_attr( $this->get_cash_option( 'receiver_cash_app' ) ) );
         }
 
         public function get_cash_receiver_venmo_callback() {
@@ -254,33 +254,33 @@ if ( !class_exists( 'Get_Cash' ) ) {
             } else {
                 $test = null;
             }
-            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_venmo]" id="receiver_venmo" value="%s">' . $test, $this->get_cash_option( 'receiver_venmo' ) );
+            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_venmo]" id="receiver_venmo" value="%s">' . $test, esc_attr( $this->get_cash_option( 'receiver_venmo' ) ) );
         }
 
         public function get_cash_receiver_paypal_callback() {
             if ( !empty( $this->get_cash_option( 'receiver_paypal' ) ) ) {
-                $test = '<a class="link-primary" href="https://paypal.me/' . $this->get_cash_option( 'receiver_paypal' ) . '" target="_blank">Test</a>';
+                $test = '<a class="link-primary" href="https://paypal.me/' . esc_attr( $this->get_cash_option( 'receiver_paypal' ) ) . '" target="_blank">Test</a>';
             } else {
                 $test = null;
             }
-            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_paypal]" id="receiver_paypal" value="%s">' . $test, $this->get_cash_option( 'receiver_paypal' ) );
+            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_paypal]" id="receiver_paypal" value="%s">' . $test, esc_attr( $this->get_cash_option( 'receiver_paypal' ) ) );
         }
 
         public function get_cash_receiver_no_callback() {
-            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_no]" id="receiver_no" value="%s">', $this->get_cash_option( 'receiver_no' ) );
+            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_no]" id="receiver_no" value="%s">', esc_attr( $this->get_cash_option( 'receiver_no' ) ) );
         }
 
         public function get_cash_receiver_owner_callback() {
-            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_owner]" id="receiver_owner" value="%s">', $this->get_cash_option( 'receiver_owner' ) );
+            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_owner]" id="receiver_owner" value="%s">', esc_attr( $this->get_cash_option( 'receiver_owner' ) ) );
         }
 
         public function get_cash_receiver_email_callback() {
-            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_email]" id="receiver_email" value="%s">', $this->get_cash_option( 'receiver_email' ) );
+            printf( '<input class="gc-text" type="text" name="get_cash_option_name[receiver_email]" id="receiver_email" value="%s">', esc_attr( $this->get_cash_option( 'receiver_email' ) ) );
         }
 
         // PRO Features
         public function get_cash_donate_button_text_callback() {
-            printf( '<input disabled class="gc-text" type="text" name="get_cash_option_name[donate_button_text]" id="donate_button_text" value="%s">', $this->get_cash_option( 'donate_button_text' ) );
+            printf( '<input disabled class="gc-text" type="text" name="get_cash_option_name[donate_button_text]" id="donate_button_text" value="%s">', esc_attr( $this->get_cash_option( 'donate_button_text' ) ) );
         }
 
         public function get_cash_donate_button_display_callback() {

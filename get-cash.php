@@ -6,7 +6,7 @@ Plugin URI: https://theafricanboss.com/get-cash
 Description: Receive Cash, Tips, Donations, Funds, Support on WordPress via Cash App, Venmo, PayPal, Zelle with a button or QR Code anywhere on your website
 Author: The African Boss
 Author URI: https://theafricanboss.com
-Version: 3.2.2
+Version: 3.2.3
 Requires PHP: 5.0
 Requires at least: 5.0
 Tested up to: 6.8.1
