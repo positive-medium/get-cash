@@ -143,12 +143,12 @@ function get_cash_zelle_shortcode(  $atts  ) {
     $display = 'display: inline-block;';
     $shadow = 'box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);';
     $css = $display . $shadow;
-    $zelle_html = '<div class="get-cash-zelle" style="padding: 1em; max-width: 75%; text-align: center; border-radius: 10px;' . esc_html( $css ) . '">' . '<p>' . wp_kses_post( sprintf( __( 'Send %s via %s or from your bank', GET_CASH_PLUGIN_TEXT_DOMAIN ), $amount, '<a style="color: #6d1fd4" href="https://zellepay.com/" target="_blank">Zelle</a>' ) ) . '.</p>' . '<p>' . esc_html__( 'Here are the Zelle details you should know for the transfer', GET_CASH_PLUGIN_TEXT_DOMAIN ) . ':</p>' . '<p>' . '<div>' . sprintf( esc_html__( '%s Name', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverName" type="text" readonly value="' . esc_html( $receiver_zelle_name ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span><br></div>';
+    $zelle_html = '<div class="get-cash-zelle" style="padding: 1em; max-width: 75%; text-align: center; border-radius: 10px;' . esc_html( $css ) . '">' . '<p>' . wp_kses_post( sprintf( __( 'Send %s via %s or from your bank', GET_CASH_PLUGIN_TEXT_DOMAIN ), $amount, '<a style="color: #6d1fd4" href="https://zellepay.com/" target="_blank">Zelle</a>' ) ) . '.</p>' . '<p>' . esc_html__( 'Here are the Zelle details you should know for the transfer', GET_CASH_PLUGIN_TEXT_DOMAIN ) . ':</p>' . '<p>' . '<div>' . sprintf( esc_html__( '%s Name', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverName" type="text" readonly value="' . esc_attr( $receiver_zelle_name ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span><br></div>';
     if ( !empty( $receiver_zelle_email ) ) {
-        $zelle_html .= '<div>' . sprintf( esc_html__( '%s Email', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverEmail" type="text" readonly value="' . esc_html( $receiver_zelle_email ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span><br></div>';
+        $zelle_html .= '<div>' . sprintf( esc_html__( '%s Email', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverEmail" type="text" readonly value="' . esc_attr( $receiver_zelle_email ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span><br></div>';
     }
     if ( !empty( $receiver_zelle_number ) ) {
-        $zelle_html .= '<div>' . sprintf( esc_html__( '%s Phone', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverNo" type="text" readonly value="' . esc_html( $receiver_zelle_number ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span></div>';
+        $zelle_html .= '<div>' . sprintf( esc_html__( '%s Phone', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverNo" type="text" readonly value="' . esc_attr( $receiver_zelle_number ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span></div>';
     }
     // $zelle_html .= sprintf(  esc_html__( '%s Name', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <strong>'. esc_html( $receiver_zelle_name ). '</strong><br>' .
     // sprintf(  esc_html__( '%s Email', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <strong>'. esc_html( $receiver_zelle_email ). '</strong><br>' .
@@ -219,12 +219,12 @@ function get_all_cash_shortcode(  $atts  ) {
     $receiver_zelle_email = $get_cash_options['receiver_email'];
     $receiver_zelle_number = $get_cash_options['receiver_no'];
     if ( $receiver_zelle_number || $receiver_zelle_email ) {
-        $zelle_html = '<div style="display: block; margin: 0 auto; padding: 1em; max-width: 75%; text-align: center; border-radius: 10px;">' . '<p>' . wp_kses_post( sprintf( __( 'Send %s via %s or from your bank', GET_CASH_PLUGIN_TEXT_DOMAIN ), esc_attr( wp_kses_post( $zelle ) ), '<a style="color: #6d1fd4" href="https://zellepay.com/" target="_blank">Zelle</a>' ) ) . '.</p>' . '<p>' . esc_html__( 'Here are the Zelle details you should know for the transfer', GET_CASH_PLUGIN_TEXT_DOMAIN ) . ':</p>' . '<p>' . '<div>' . sprintf( esc_html__( '%s Name', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverName" type="text" readonly value="' . esc_html( $receiver_zelle_name ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span><br></div>';
+        $zelle_html = '<div style="display: block; margin: 0 auto; padding: 1em; max-width: 75%; text-align: center; border-radius: 10px;">' . '<p>' . wp_kses_post( sprintf( __( 'Send %s via %s or from your bank', GET_CASH_PLUGIN_TEXT_DOMAIN ), esc_attr( wp_kses_post( $zelle ) ), '<a style="color: #6d1fd4" href="https://zellepay.com/" target="_blank">Zelle</a>' ) ) . '.</p>' . '<p>' . esc_html__( 'Here are the Zelle details you should know for the transfer', GET_CASH_PLUGIN_TEXT_DOMAIN ) . ':</p>' . '<p>' . '<div>' . sprintf( esc_html__( '%s Name', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverName" type="text" readonly value="' . esc_attr( $receiver_zelle_name ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span><br></div>';
         if ( !empty( $receiver_zelle_email ) ) {
-            $zelle_html .= '<div>' . sprintf( esc_html__( '%s Email', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverEmail" type="text" readonly value="' . esc_html( $receiver_zelle_email ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span><br></div>';
+            $zelle_html .= '<div>' . sprintf( esc_html__( '%s Email', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverEmail" type="text" readonly value="' . esc_attr( $receiver_zelle_email ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span><br></div>';
         }
         if ( !empty( $receiver_zelle_number ) ) {
-            $zelle_html .= '<div>' . sprintf( esc_html__( '%s Phone', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverNo" type="text" readonly value="' . esc_html( $receiver_zelle_number ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span></div>';
+            $zelle_html .= '<div>' . sprintf( esc_html__( '%s Phone', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverNo" type="text" readonly value="' . esc_attr( $receiver_zelle_number ) . '"><span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span></div>';
         }
         // $zelle_html .= sprintf(  esc_html__( '%s Name', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <strong>'. esc_html( $receiver_zelle_name ). '</strong><br>' .
         // sprintf(  esc_html__( '%s Email', GET_CASH_PLUGIN_TEXT_DOMAIN ), 'Zelle' ) . ': <strong>'. esc_html( $receiver_zelle_email ). '</strong><br>' .
@@ -263,8 +263,8 @@ function get_cash_form_shortcode(  $atts  ) {
          <h4 class="get-cash-form-fields get-cash-form-section-title">' . esc_html__( 'Transaction Details', GET_CASH_PLUGIN_TEXT_DOMAIN ) . '</h4>
           <div class="form-row form-row-wide">
              <label class="get-cash-form-fields get-cash-form-label">' . esc_html__( 'Amount to send', GET_CASH_PLUGIN_TEXT_DOMAIN ) . ': <span class="required">*</span></label>
-              <input class="get-cash-form-fields get-cash-form-input" name="GetCashAmount" type="number" placeholder="' . esc_html__( 'Insert Amount', GET_CASH_PLUGIN_TEXT_DOMAIN ) . '" value="' . $amount . '" required>
-              <input class="get-cash-form-fields get-cash-form-input" name="GetCashCurrency" type="text" placeholder="' . esc_html__( 'Insert Currency', GET_CASH_PLUGIN_TEXT_DOMAIN ) . '" value="' . $currency . '" required>
+              <input class="get-cash-form-fields get-cash-form-input" name="GetCashAmount" type="number" placeholder="' . esc_html__( 'Insert Amount', GET_CASH_PLUGIN_TEXT_DOMAIN ) . '" value="' . esc_attr( $amount ) . '" required>
+              <input class="get-cash-form-fields get-cash-form-input" name="GetCashCurrency" type="text" placeholder="' . esc_html__( 'Insert Currency', GET_CASH_PLUGIN_TEXT_DOMAIN ) . '" value="' . esc_attr( $currency ) . '" required>
          </div>
 
          <div class="form-row form-row-wide">
@@ -309,14 +309,14 @@ function get_cash_form_shortcode(  $atts  ) {
     if ( !empty( $receiver_no ) ) {
         $form_html .= '<div class="form-row form-row-wide">
                 <label class="get-cash-form-fields get-cash-form-label">' . esc_html__( 'Receiver Phone Number', GET_CASH_PLUGIN_TEXT_DOMAIN ) . ':</label>
-                <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverNo" type="text" readonly value="' . $receiver_no . '">
+                <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverNo" type="text" readonly value="' . esc_attr( $receiver_no ) . '">
                 <span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span>
             </div>';
     }
     if ( !empty( $receiver_email ) ) {
         $form_html .= '<div class="form-row form-row-wide">
                 <label class="get-cash-form-fields get-cash-form-label">' . esc_html__( 'Receiver Email', GET_CASH_PLUGIN_TEXT_DOMAIN ) . ':</label>
-                <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverEmail" type="email" readonly value="' . $receiver_email . '">
+                <input class="get-cash-form-fields get-cash-form-input get-cash-readonly copytxt" name="GetCashReceiverEmail" type="email" readonly value="' . esc_attr( $receiver_email ) . '">
                 <span class="position-relative copybtn" style="float: right;z-index: 1;">Copy</span>
             </div>';
     }
@@ -332,7 +332,7 @@ function get_cash_form_shortcode(  $atts  ) {
     </form><div id="get-cash-form-result"></div></fieldset>';
     wp_enqueue_style( 'get-cash-form-css' );
     wp_enqueue_script( 'get-cash-form-js' );
-    wp_add_inline_script( 'get-cash-form-js', 'const site_url = "' . site_url() . '"; const cashapp = "' . $cashapp . '"; const venmo = "' . $venmo . '"; const zelle = "' . $zelle . '"; const paypal = "' . $paypal . '"; ' );
+    wp_add_inline_script( 'get-cash-form-js', 'const site_url = "' . esc_js( site_url() ) . '"; const cashapp = "' . esc_js( $cashapp ) . '"; const venmo = "' . esc_js( $venmo ) . '"; const zelle = "' . esc_js( $zelle ) . '"; const paypal = "' . esc_js( $paypal ) . '"; ' );
     wp_localize_script( 'get-cash-form-js', 'get_cash_form_object', array(
         'site_url'        => site_url(),
         'cashapp'         => $cashapp,

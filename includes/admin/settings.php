@@ -30,12 +30,12 @@ $comingSoon = " <sup style='color:#00c;'>COMING SOON</sup>";
 				?>
 			</form>
 
-			<h2>Example Shortcodes<?php echo $new; ?></h2>
+			<h2>Example Shortcodes<?php echo wp_kses_post( $new ); ?></h2>
 			<div><img src="<?php echo GET_CASH_PLUGIN_DIR_URL . 'images/get-cash-shortcodes.jpg'; ?>" alt="Get Cash Shortcodes"></div>
 		</div>
 
 		<div class="col-12 col-md-5">
-			<h2>About [get-cash] and [get-cash-form]<?php echo $new; ?></h2>
+			<h2>About [get-cash] and [get-cash-form]<?php echo wp_kses_post( $new ); ?></h2>
 
 			<h5>Default and available options for <strong>[get-cash]</strong></h5>
 			<p><code>[get-cash title='Send Cash' amount='' qr='yes' zelle='' paypal='' paypalqr='yes' venmo='' venmoqr='yes' venmonote='Thank you' cashapp='' cashappqr='yes']</code></p>
